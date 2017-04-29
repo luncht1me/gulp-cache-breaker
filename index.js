@@ -39,7 +39,7 @@ function cacheBreakPath(base, resource) {
 		}
 
     // Play well with an existing query-string
-    return resource + (resource.indexOf('?') === -1 ? '?' : '&') + 'cb=' + qs.substring(0, 5);
+    return resource + (resource.indexOf('?') === -1 ? '?' : '&') + 'cb=' + qs.substring(0, 6);
 }
 
 module.exports = function(base) {
