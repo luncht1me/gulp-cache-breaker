@@ -34,6 +34,10 @@ function cacheBreakPath(base, resource) {
       qs = time;
     }
 
+		if( typeof qs == 'number' ){
+			qs = qs.toString();
+		}
+
     // Play well with an existing query-string
     return resource + (resource.indexOf('?') === -1 ? '?' : '&') + 'cb=' + qs.substring(0, 5);
 }
